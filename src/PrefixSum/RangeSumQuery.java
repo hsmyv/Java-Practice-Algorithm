@@ -12,6 +12,12 @@ public class RangeSumQuery {
 
 
     }
+
+
+
+
+
+
     public static int rangeSumQuery(int[] arr, int left, int right){
         int[] prefix = new int[arr.length];
         int sum = 0;
@@ -27,8 +33,9 @@ public class RangeSumQuery {
             result = prefix[right] - prefix[left - 1];
         }
         return result;
-
     }
+
+
 }
 
 
