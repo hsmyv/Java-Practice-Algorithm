@@ -11,7 +11,7 @@ public class TwoSumSorted {
             int sum = arr[left] + arr[right];
 
             if (sum == target) {
-                return new int[]{left, right};
+                return new int[]{left + 1, right + 1}; //if return the indices of the two numbers, indexed from 1
             } else if (sum < target) {
                 left++;
             } else {
