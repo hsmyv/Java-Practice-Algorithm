@@ -34,6 +34,6 @@ public class SubarraySumEqualsK {
 
             int k = 4;
 
-            System.out.println(subarraySum(nums, k)); // 2
+            System.out.println(subarraySum(nums, k)); // 3
         }
 }
