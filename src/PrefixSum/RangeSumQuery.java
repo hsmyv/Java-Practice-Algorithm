@@ -20,18 +20,20 @@ public class RangeSumQuery {
 
     public static int rangeSumQuery(int[] arr, int left, int right){
         int[] prefix = new int[arr.length];
-        int sum = 0;
-        int result = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-            prefix[i] = sum;
+        prefix[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i];
         }
 
+        int result = 0;
+
         if(left == 0){
-            result =  prefix[right];
-        }else{
+            result = prefix[right];
+        }else {
             result = prefix[right] - prefix[left - 1];
         }
+
         return result;
     }
 
